@@ -2,22 +2,20 @@ package mohannad.springframework.sfgpetclinic.bootstrap;
 
 import mohannad.springframework.sfgpetclinic.model.Owner;
 import mohannad.springframework.sfgpetclinic.model.Vet;
-import mohannad.springframework.sfgpetclinic.services.OwenerService;
+import mohannad.springframework.sfgpetclinic.services.OwnerService;
 import mohannad.springframework.sfgpetclinic.services.VetService;
-import mohannad.springframework.sfgpetclinic.services.map.OwnerServiceMap;
-import mohannad.springframework.sfgpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private final OwenerService owenerService;
+    private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        owenerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -27,14 +25,14 @@ public class DataLoader implements CommandLineRunner {
         owner1.setFirstName("mohannad");
         owner1.setLastName("elmaghrby");
 
-        owenerService.save(owner1);
+        ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner1.setId(2L);
         owner1.setFirstName("omar");
         owner1.setLastName("abdo");
 
-        owenerService.save(owner2);
+        ownerService.save(owner2);
 
         System.out.println("Loaded Owners .....");
         Vet vet1 = new Vet();

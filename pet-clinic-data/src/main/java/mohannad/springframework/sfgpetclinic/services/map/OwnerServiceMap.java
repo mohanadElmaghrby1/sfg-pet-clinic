@@ -1,11 +1,13 @@
 package mohannad.springframework.sfgpetclinic.services.map;
 
 import mohannad.springframework.sfgpetclinic.model.Owner;
-import mohannad.springframework.sfgpetclinic.services.OwenerService;
+import mohannad.springframework.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends  AbstractMapService<Owner , Long> implements OwenerService {
+@Service
+public class OwnerServiceMap extends  AbstractMapService<Owner , Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
