@@ -23,8 +23,9 @@ public class Pet  extends BaseEntity{
     @DateTimeFormat(pattern = "yyyy-mm-dd")
     private LocalDate birthDate;
 
-    @OneToMany(cascade = CascadeType.ALL , mappedBy = "pet")
-    private Set<Visit>visits = new HashSet<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
+
 
     public String getName() {
         return name;

@@ -13,7 +13,7 @@ import java.util.Set;
  * created by mohannad
  */
 @Service
-@Profile("springdatjpa")
+@Profile("springdatajpa")
 public class PetSDJpaService implements PetService {
 
     private final PetRepository petRepository;
