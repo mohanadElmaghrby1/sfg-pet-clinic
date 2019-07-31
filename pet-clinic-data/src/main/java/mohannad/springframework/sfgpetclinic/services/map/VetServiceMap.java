@@ -7,7 +7,6 @@ import mohannad.springframework.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
 @Service
 public class VetServiceMap extends  AbstractMapService<Vet, Long> implements VetService {
 
@@ -44,7 +43,7 @@ public class VetServiceMap extends  AbstractMapService<Vet, Long> implements Vet
             });
         }
 
-        return super.save(object);
+        return  super.save(object);
     }
 
     @Override

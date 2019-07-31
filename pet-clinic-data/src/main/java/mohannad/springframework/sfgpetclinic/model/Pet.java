@@ -12,7 +12,6 @@ import java.util.Set;
 public class Pet  extends BaseEntity{
 
     private String name;
-
     @ManyToOne
     @JoinColumn(name = "type_id")
     private PetType petType;
