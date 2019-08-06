@@ -9,7 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Application.class) //important its solve exeption 
+@SpringBootTest(classes = Application.class) //important its solve exeption
 public class SfgPetClinicApplicationTests {
 
     @Test
